@@ -93,7 +93,7 @@ img {
 }
 
 .arrow{
-  width: 100px;
+  width: 95px;
   height: 40px;
   background: #ADD8E6;
   position: fixed;
@@ -102,17 +102,47 @@ img {
   -wekbit-transform: translate(0, 0);
   transform: translate(0,0);
   z-index: 0;
+
   height: auto;
-  position: absolute;
-  -webkit-transform: translate(-300px, 0);
-  transform: translate(-300px, 0);
+  -webkit-transform: translate(-110px, 0);
+  transform: translate(-110px, 0);
   transition: transform 0.3s ease;
   z-index: 1000;
-  background-color: white;
-  border-right: 2px red solid;
-  box-shadow: 2px 2px 20px rgba(0,0,0,0.6);
-  top: 0;
 }
+.arrow::after {
+    content:' ';
+    height: 0;
+    width: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #ADD8E6;
+    position: absolute;
+    left: 100px;
+    top: 0px;
+}
+
+
+.arrow.open{
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+
+  #fixedbutton {
+    position: center;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    font-size: 33px;
+  }
+
+  #indexATag{
+    text-decoration: none;
+    color: white;
+  }
 
 
 @media screen and (min-width: 1050px) {
@@ -139,19 +169,4 @@ img {
       top: 0px;
   }
 
-  #fixedbutton {
-    position: center;
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    font-size: 35px;
-  }
-
-  #indexATag{
-    text-decoration: none;
-    color: white;
-  }
 }
